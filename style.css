@@ -1,0 +1,601 @@
+/* --- ОБНУЛЕНИЕ И БАЗОВЫЕ СТИЛИ --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+  min-width: 1200px; /* Чтобы контент не сжимался на мелких экранах */
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- КОМПОНЕНТЫ КНОПОК И ТИТЛОВ --- */
+.btn {
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.btn--primary {
+  background-color: #2b70fa;
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background-color: #1a5cd6;
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.section-title--center {
+  text-align: center;
+}
+
+.section-title--blue {
+  color: #2b70fa;
+}
+
+/* --- ШАПКА САЙТА (HEADER) --- */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 20px 0;
+}
+
+.header__container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav__link {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.nav__link--active, .nav__link:hover {
+  color: #2b70fa;
+}
+
+/* --- ГЛАВНЫЙ ЭКРАН (HERO) --- */
+.hero {
+  background: #0b1528 url('https://via.placeholder.com/1920x800') no-repeat center center / cover;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  padding-top: 100px;
+}
+
+.hero__container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero__number {
+  font-size: 4rem;
+  font-weight: 700;
+  opacity: 0.15;
+  display: block;
+  margin-bottom: -10px;
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero__title--blue {
+  color: #2b70fa;
+}
+
+.hero__text {
+  width: 550px;
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 35px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 15px;
+}
+
+/* --- КАК МЫ РАБОТАЕМ (HOW WE WORK) --- */
+.how-work {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.how-work__container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.how-work__grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 50px;
+}
+
+.step__image-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 3px dashed #2b70fa;
+  padding: 5px;
+}
+
+.step__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.step__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* --- ПРЕИМУЩЕСТВА (FEATURES) --- */
+.features {
+  background-color: #162238;
+  color: #fff;
+  padding: 80px 0;
+}
+
+.features__container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-card__icon {
+  font-size: 2rem;
+  color: #2b70fa;
+}
+
+.feature-card__title {
+  font-size: 1.3rem;
+}
+
+.feature-card__text {
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
+
+/* --- МОЇ ПРОЄКТИ (PROJECTS) --- */
+.projects {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.projects__container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.projects__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: center;
+}
+
+.project-card__image-placeholder {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #e2e5e9;
+  border-radius: 6px;
+}
+.img__full {
+  width: 100%;
+  height: 100%;
+}
+.project-card:hover .project-card__image-placeholder {
+  background-color: #d4d7dc;
+}
+
+.project-card__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.4;
+}
+
+/* --- ПОЧЕМУ МЫ (WHY CHOOSE US) --- */
+.why-us {
+  background: #f9fbfd url('https://via.placeholder.com/1920x600') no-repeat right center / contain;
+  padding: 100px 0;
+}
+
+.why-us__container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.why-us__content {
+  width: 500px;
+}
+
+.why-us__subtitle {
+  color: #2b70fa;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.list-reasons {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.list-reasons__item {
+  display: flex;
+  gap: 20px;
+}
+
+.list-reasons__num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2b70fa;
+}
+
+.list-reasons__title {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.list-reasons__text {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* --- ГАЛЕРЕЯ (GALLERY GRID) --- */
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.gallery__img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.gallery_ccs_html {
+  width: 80%;
+  margin: 0 auto;
+}
+.gallery_github {
+  height: 120px;
+  margin: auto;
+}
+/* --- ОТЗЫВЫ (TESTIMONIALS) --- */
+.testimonials {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.testimonials__container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0 20px;
+}
+
+.testimonial__arrow {
+  background: none;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #2b70fa;
+}
+
+.testimonial__avatars {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial__avatar {
+  border-radius: 50%;
+  opacity: 0.5;
+  object-fit: cover;
+}
+
+.testimonial__avatar--active {
+  opacity: 1;
+  border: 3px solid #2b70fa;
+}
+
+.testimonials__text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.testimonials__author {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.testimonials__author-role {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* --- CTA (ИННОВАЦИИ) --- */
+.cta {
+  background: #162238 url('https://via.placeholder.com/1920x400') no-repeat left center / cover;
+  padding: 80px 0;
+  color: #fff;
+}
+.monkey {
+  height: 300px;
+  margin: auto;
+}
+.cta__container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.tenor-gif-embed {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;         
+}
+.cta__content {
+  width: 500px;
+}
+
+.cta__title {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.cta__title--blue {
+  color: #2b70fa;
+}
+
+.cta__text {
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.cta__actions {
+  display: flex;
+  gap: 15px;
+}
+
+/* --- НОВОСТИ (NEWS) --- */
+.news {
+  padding: 80px 0;
+}
+
+.news__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.news__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .news__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.article-main__img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.article-main__tag, .article-side__tag {
+  background: #2b70fa;
+  color: #fff;
+  padding: 3px 10px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.article-main__title {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.article-main__text {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.article-main__link {
+  color: #2b70fa;
+  font-weight: 600;
+}
+
+.news__side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article-side {
+  display: flex;
+  gap: 15px;
+  background: #f9fbfd;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.article-side__img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.footer {
+  background: #0b1528;
+  color: #fff;
+  padding: 60px 0;
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 576px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer__logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer__text {
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+.footer__title {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.footer__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__link {
+  opacity: 0.7;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+
+.footer__link:hover {
+  opacity: 1;
+  color: #2b70fa;
+}
